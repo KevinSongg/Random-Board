@@ -1,0 +1,22 @@
+import random
+
+w, h = 10, 10;
+
+Matrix = [[random.randint(0,9) for x in range(w)] for y in range(h)] 
+
+
+def findSum(input):
+    my_sum = 0
+    for row in input:
+        my_sum += sum(row)
+    return my_sum
+
+print (findSum(Matrix))
+
+def print2DArray(input):
+    for r in input:
+        for c in r:
+            print(c,end = " ")
+        print()
+            
+print2DArray(Matrix)
